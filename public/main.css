@@ -1,0 +1,39 @@
+.loader {
+  width: 3rem;
+  height: 0.75rem;
+  margin-right: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader-square {
+  width: 0.75rem;
+  height: 0.75rem;
+  background-color: hsl(0, 0%, 35%);
+  position: absolute;
+  animation: pulse 0.5s ease-in-out infinite alternate;
+}
+
+.square-1 {
+  left: 0;
+  transform-origin: 100% 50%;
+}
+
+.square-2 {
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  animation-delay: 0.25s;
+}
+
+.square-3 {
+  right: 0;
+  animation-delay: 0.5s;
+}
+
+@keyframes pulse {
+  to {
+    transform: translateX(-50%) scale(0);
+  }
+}

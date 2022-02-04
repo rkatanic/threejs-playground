@@ -1,0 +1,70 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  position: relative;
+  margin: auto;
+  max-width: var(--width-desktop);
+}
+
+@media screen and (max-width: 1000px) {
+  :root {
+    --width-desktop: 40rem;
+  }
+
+  .home-scroll {
+    display: none;
+  }
+
+  .footer-go-to-top {
+    display: none !important;
+  }
+
+  .home-settings {
+    margin-top: 1rem;
+    position: initial;
+  }
+
+  .settings {
+    flex-direction: row;
+  }
+
+  .footer-content-about {
+    flex-direction: row !important;
+  }
+
+  .footer-content-about-txt {
+    top: 2rem !important;
+  }
+
+  .pinpoint {
+    margin: 1rem 0;
+    right: unset !important;
+    position: relative !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  :root {
+  }
+
+  .main {
+    padding: 0 2rem;
+  }
+
+  .shapes,
+  .date-time {
+    display: none;
+  }
+
+  .slider-wrapper {
+    max-width: 19rem;
+    margin: auto;
+  }
+
+  .header-content {
+    justify-content: center;
+  }
+}

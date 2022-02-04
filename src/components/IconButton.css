@@ -1,0 +1,65 @@
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  outline: none;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--color-white);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.25s;
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+.icon-button:hover {
+  transform: translateY(-2px);
+}
+
+.icon-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  z-index: 1;
+}
+
+.icon-button-outline {
+  background-color: var(--color-white);
+  width: 2.5rem;
+  height: 2.5rem;
+  position: relative;
+  transition: transform 0.25s;
+}
+
+.icon-button-outline svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.icon-button-outline::before {
+  content: "";
+  position: absolute;
+  background: var(--color-black);
+  width: calc(2.5rem - 4px);
+  height: calc(2.5rem - 4px);
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}

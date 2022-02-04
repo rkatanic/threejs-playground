@@ -1,0 +1,15 @@
+.slider-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 5.5rem;
+  right: 5rem;
+}

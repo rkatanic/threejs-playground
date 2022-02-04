@@ -1,0 +1,73 @@
+.example-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 4rem 0;
+  padding: 1rem;
+  background-color: var(--color-gray-five);
+  position: relative;
+  height: 550px;
+  clip-path: polygon(
+    3% 0%,
+    57% 0%,
+    60% 5%,
+    100% 5%,
+    100% 95%,
+    97% 100%,
+    25% 100%,
+    22% 95%,
+    0% 95%,
+    0% 5%
+  );
+}
+
+.example-container::before {
+  content: "";
+  position: absolute;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: var(--color-black);
+  clip-path: polygon(
+    3% 0%,
+    57% 0%,
+    60% 5%,
+    100% 5%,
+    100% 95%,
+    97% 100%,
+    25% 100%,
+    22% 95%,
+    0% 95%,
+    0% 5%
+  );
+}
+
+.three-js-canvas {
+  height: 550px !important;
+}
+
+.example {
+  position: relative;
+}
+
+.example-title {
+  position: absolute;
+  right: 0;
+  top: -0.75rem;
+  font-weight: 500;
+  font-size: 1.75rem;
+}
+
+.example-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  gap: 0.5rem;
+  color: var(--color-gray-four);
+}
+
+.example-txt .icon-alert-error {
+  margin: auto;
+}

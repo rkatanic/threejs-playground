@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap");
+
+:root {
+  --color-hue: 160;
+  --color-black: hsl(0, 0%, 7%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-gray: hsl(0, 0%, 30%);
+  --color-gray-two: hsl(0, 0%, 11.5%);
+  --color-gray-three: hsl(0, 0%, 10%);
+  --color-gray-four: hsl(0, 0%, 70%);
+  --color-gray-five: hsl(0, 0%, 15%);
+
+  --color-primary: hsl(var(--color-hue), 70%, 62%);
+
+  --font-body: "Exo", sans-serif;
+
+  --margin-left: 12.5vw;
+  --nav-height: 4rem;
+  --width-desktop: 60rem;
+  --width-sidenav: 4rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  font-size: 1rem;
+  font-family: var(--font-body);
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body.day-mode {
+  --color-black: hsl(0, 0%, 95%);
+  --color-white: hsl(0, 0%, 15%);
+  --color-gray: hsl(0, 0%, 9%);
+  --color-gray-two: hsl(0, 0%, 95%);
+  --color-gray-three: hsl(0, 0%, 88%);
+  --color-gray-four: hsl(0, 0%, 55%);
+  --color-gray-five: hsl(0, 0%, 84%);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1;
+  color: var(--color-white);
+  align-items: center;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}

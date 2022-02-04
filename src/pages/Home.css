@@ -1,0 +1,186 @@
+.home-heading {
+  position: relative;
+  margin: 6rem 0;
+}
+
+.home-title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.home-title {
+  letter-spacing: 4px;
+  font-size: 4rem;
+  text-align: center;
+  position: relative;
+}
+
+.home-title span:last-child {
+  font-size: 10.5rem;
+}
+
+.home-title-binary {
+  position: absolute;
+  text-align: justify;
+  top: 20%;
+  right: 0%;
+  max-width: 6rem;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 0.825rem;
+  z-index: -1;
+  color: var(--color-gray);
+}
+
+.shapes {
+  padding: 0 2rem;
+  gap: 1rem;
+  align-items: center;
+  display: flex;
+}
+
+.vertical-line {
+  height: 10rem;
+  width: 1px;
+  background: var(--color-gray);
+  position: relative;
+}
+
+.vertical-line::before {
+  position: absolute;
+  content: "";
+  top: 1.5rem;
+  left: -1px;
+  width: 3px;
+  height: 2rem;
+  background: var(--color-white);
+}
+
+.vertical-line::after {
+  position: absolute;
+  content: "";
+  bottom: 1.5rem;
+  left: -1px;
+  width: 3px;
+  height: 2rem;
+  background: var(--color-white);
+}
+
+.shape-rectangle {
+  width: 2rem;
+  height: 6rem;
+  border: 1px solid var(--color-gray);
+  position: relative;
+}
+
+.shape-rectangle:first-child {
+  border-right: 0;
+}
+
+.shape-rectangle:last-child {
+  border-left: 0;
+}
+
+.shape-rectangle::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-left: 0;
+}
+
+.shape-rectangle:first-child:before {
+  left: -1.5rem;
+  border: 0.35rem solid transparent;
+  border-right: 0.5rem solid var(--color-gray);
+}
+
+.shape-rectangle:last-child:before {
+  right: -1.5rem;
+  border: 0.35rem solid transparent;
+  border-left: 0.5rem solid var(--color-gray);
+}
+
+.shape-rectangle::after {
+  transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: calc(50% - 0.5rem);
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 2px solid var(--color-white);
+}
+
+.shape-rectangle:first-child::after {
+  left: -4rem;
+}
+
+.shape-rectangle:last-child::after {
+  right: -4rem;
+}
+
+.home-subtitle {
+  line-height: 1.25;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.625rem;
+}
+
+.home-scroll {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  left: 3rem;
+  top: 50%;
+  letter-spacing: 2px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transform: rotate(-90deg);
+}
+
+.home-scroll-icons .icon-chevron-right {
+  margin-top: -0.25rem;
+  margin-left: -0.45rem;
+  transform: rotate(180deg);
+  width: 12px;
+}
+
+.home-settings {
+  top: 4.5rem;
+  right: 5rem;
+  position: absolute;
+}
+
+.vr-line {
+  top: 5%;
+  right: 6.25rem;
+  position: absolute;
+  width: 2px;
+  height: 85%;
+  background: var(--color-gray-five);
+}
+
+.vr-line::before,
+.vr-line::after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  left: -5px;
+  height: 2px;
+  background: var(--color-gray-five);
+}
+
+.vr-line::after {
+  bottom: 0;
+}
+
+.vr-bubble {
+  margin: 3rem 0 3rem -3px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gray-five);
+}
