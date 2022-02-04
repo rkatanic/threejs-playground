@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import IconButton from "./IconButton";
 import { COLORS, DEFAULT_COLOR_HUE } from "../util/constants/colors";
 import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
@@ -11,6 +11,7 @@ const ColorSwitch = (): JSX.Element => {
   const [selectedColor, setSelectedColor] = useState(
     Number(window.localStorage.getItem("color")?.valueOf())
   );
+  const colorSwitch = useRef<any>();
 
   const handleColorSwitch = (value: number): void => {
     setSelectedColor(value);
@@ -21,10 +22,22 @@ const ColorSwitch = (): JSX.Element => {
     );
   };
 
+  const handleClickOutside = (event: Event): void => {
+    if (colorSwitch && !colorSwitch.current.contains(event.target)) {
+      setShowColorList(false);
+    }
+  };
+
   const setColorToLocalStorage = (value: number): void =>
     window.localStorage.setItem("color", value.toString());
 
+  const handleColorListToggle = (): void => {
+    setShowColorList((prevState: boolean) => !prevState);
+  };
+
   useEffect(() => {
+    window.addEventListener("mousedown", handleClickOutside);
+
     const colorValueFromLocalStorage = Number(
       window.localStorage.getItem("color")?.valueOf()
     );
@@ -34,12 +47,18 @@ const ColorSwitch = (): JSX.Element => {
     } else {
       handleColorSwitch(colorValueFromLocalStorage);
     }
+
+    return () => window.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
     <>
-      <div className="color-list">
-        <IconButton type="outline" icon={<DropIcon />} />
+      <div className="color-switch" ref={colorSwitch}>
+        <IconButton
+          onClick={handleColorListToggle}
+          type="outline"
+          icon={<DropIcon />}
+        />
         {showColorList && (
           <div className="color-list">
             {COLORS.map(

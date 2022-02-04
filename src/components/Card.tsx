@@ -16,7 +16,12 @@ const Card = ({
   number,
   url,
 }: Props): JSX.Element => (
-  <NavLink to={`${url}`}>
+  <NavLink
+    to={`${url}`}
+    className={({ isActive }) =>
+      `nav-link ${isActive ? "nav-link-active" : ""}`
+    }
+  >
     <div data-tilt className="card">
       <div className="card-content">
         <div className="card-heading">
