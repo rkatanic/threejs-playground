@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import IconButton from "./IconButton";
 import { COLORS, DEFAULT_COLOR_HUE } from "../util/constants/colors";
 import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
@@ -13,14 +13,14 @@ const ColorSwitch = (): JSX.Element => {
   );
   const colorSwitch = useRef<any>();
 
-  const handleColorSwitch = (value: number): void => {
+  const handleColorSwitch = useCallback((value: number) => {
     setSelectedColor(value);
     setColorToLocalStorage(value);
     window.document.documentElement.style.setProperty(
       "--color-hue",
       value.toString()
     );
-  };
+  }, []);
 
   const handleClickOutside = (event: Event): void => {
     if (colorSwitch && !colorSwitch.current.contains(event.target)) {
@@ -49,7 +49,7 @@ const ColorSwitch = (): JSX.Element => {
     }
 
     return () => window.removeEventListener("mousedown", handleClickOutside);
-  }, []);
+  }, [handleColorSwitch]);
 
   return (
     <>
