@@ -21,7 +21,7 @@ const ThreeSixtyView = (): JSX.Element => {
   };
 
   return (
-    <Canvas className="three-js-canvas" camera={{ position: [0, 0, 0.1] }}>
+    <Canvas className="three-js-canvas" camera={{ position: [-1, 0, 0] }}>
       <OrbitControls enableZoom={false} rotateSpeed={0.5} />
       <Suspense fallback={null}>
         <Geometry />

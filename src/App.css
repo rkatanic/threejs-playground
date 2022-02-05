@@ -9,6 +9,16 @@
   max-width: var(--width-desktop);
 }
 
+.message-box {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-black);
+}
+
 @media screen and (max-width: 1000px) {
   :root {
     --width-desktop: 40rem;
@@ -43,25 +53,5 @@
     margin: 1rem 0;
     right: unset !important;
     position: relative !important;
-  }
-}
-
-@media screen and (max-width: 670px) {
-  .main {
-    padding: 0 2rem;
-  }
-
-  .shapes,
-  .date-time {
-    display: none;
-  }
-
-  .slider-wrapper {
-    max-width: 19rem;
-    margin: auto;
-  }
-
-  .header-content {
-    justify-content: center;
   }
 }

@@ -1,7 +1,7 @@
 .options {
   position: absolute;
   text-align: start;
-  top: 11rem;
+  top: 10rem;
   left: 2rem;
   z-index: 2;
   color: var(--color-white);

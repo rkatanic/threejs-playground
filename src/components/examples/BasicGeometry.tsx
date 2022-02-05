@@ -62,7 +62,7 @@ const BasicGeometry = (): JSX.Element => {
           <Cone
             ref={ref}
             visible
-            args={[0.5, 1, 10]}
+            args={[0.75, 0.75, 12]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
             <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
