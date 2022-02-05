@@ -21,10 +21,9 @@ const ScrollProgress = (): JSX.Element => {
   }, []);
 
   return (
-    <div className="progress-bar">
-      <div className="progress-bar-pulse"></div>
+    <div className="scroll-bar">
       <div
-        className="progress-bar-percent"
+        className="scroll-bar-percent"
         style={{ height: `${scroll}%` }}
       ></div>
     </div>

@@ -9,9 +9,10 @@
 }
 
 .loader-square {
+  border-radius: 50%;
   width: 0.75rem;
   height: 0.75rem;
-  background-color: hsl(0, 0%, 35%);
+  background-color: hsl(0, 0%, 15%);
   position: absolute;
   animation: pulse 0.5s ease-in-out infinite alternate;
 }

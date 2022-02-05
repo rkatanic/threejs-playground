@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 
 import "./App.css";
+import ScrollProgress from "./components/ScrollProgress";
 
 const App = () => {
   const [windowResizing, setWindowResizing] = useState(false);
@@ -33,8 +34,9 @@ const App = () => {
   }, []);
 
   return (
-    <div className="App">
+    <div data-testid="app" className="App">
       <Background />
+      <ScrollProgress />
       <BrowserView>
         <Cursor />
       </BrowserView>
