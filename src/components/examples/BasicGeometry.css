@@ -1,0 +1,29 @@
+.options {
+  position: absolute;
+  text-align: start;
+  top: 11rem;
+  left: 2rem;
+  z-index: 2;
+  color: var(--color-white);
+}
+
+.options-desc {
+  font-size: 0.825rem;
+  color: var(--color-gray-four);
+  top: 3rem;
+  right: 2rem;
+  position: absolute;
+}
+
+.options p:hover {
+  text-decoration: underline;
+}
+
+.basic-geometry {
+  width: 100%;
+}
+
+.options-active {
+  text-decoration: underline;
+  position: relative;
+}

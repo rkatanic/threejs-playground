@@ -1,11 +1,10 @@
 import { useRef, Suspense } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 
 const DistortedSphere = (): JSX.Element => {
   const Geometry = () => {
     const ref = useRef<any>();
-    useFrame(() => {});
 
     return (
       <Sphere ref={ref} visible args={[2.2, 100, 100]}>

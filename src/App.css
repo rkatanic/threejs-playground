@@ -47,9 +47,6 @@
 }
 
 @media screen and (max-width: 670px) {
-  :root {
-  }
-
   .main {
     padding: 0 2rem;
   }

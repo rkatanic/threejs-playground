@@ -43,7 +43,19 @@
 }
 
 .three-js-canvas {
-  height: 550px !important;
+  clip-path: polygon(
+    3% 0%,
+    57% 0%,
+    60% 5%,
+    100% 5%,
+    100% 95%,
+    97% 100%,
+    25% 100%,
+    22% 95%,
+    0% 95%,
+    0% 5%
+  );
+  height: 520px !important;
 }
 
 .example {
