@@ -1,9 +1,9 @@
+import { MeshReflectorMaterial, Stage, OrbitControls } from "@react-three/drei";
 import { Suspense, useLayoutEffect, useState } from "react";
 import { Canvas, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import * as THREE from "three";
 import file from "./car.glb";
-import { MeshReflectorMaterial, Stage, OrbitControls } from "@react-three/drei";
 
 import "./Model.css";
 

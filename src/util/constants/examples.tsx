@@ -11,6 +11,7 @@ export const EXAMPLES = [
     url: "basic-geometry",
     description: "Basic geometry examples with simple state managment.",
     component: <BasicGeometry />,
+    date: "03 FEB 2022",
   },
   {
     title: "Distorted Sphere",
@@ -18,6 +19,7 @@ export const EXAMPLES = [
     url: "distorted-sphere",
     description: "An example of mesh distort material on sphere geometry.",
     component: <DistortedSphere />,
+    date: "03 FEB 2022",
   },
   {
     title: "Wave Shader",
@@ -25,6 +27,7 @@ export const EXAMPLES = [
     url: "wave-shader",
     description: "Example of wave shader attached on plane geometry.",
     component: <WaveShader />,
+    date: "04 FEB 2022",
   },
   {
     title: "360° View",
@@ -32,6 +35,7 @@ export const EXAMPLES = [
     url: "360-view",
     description: "360° view made using sphere geometry with image texture.",
     component: <ThreeSixtyView />,
+    date: "05 FEB 2022",
   },
   {
     title: "3D Model",
@@ -39,5 +43,6 @@ export const EXAMPLES = [
     url: "3d-model",
     description: "Example of 3D imported model with basic color settings.",
     component: <Model />,
+    date: "06 FEB 2022",
   },
 ];

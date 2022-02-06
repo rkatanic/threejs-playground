@@ -26,16 +26,15 @@ const Projects = () => {
     <div className="projects">
       <div className="slider-wrapper">
         <div ref={slider} className="slider" onTransitionEnd={handleNextSlide}>
-          {slides.map(({ title, description, number, url }) => (
+          {slides.map(({ title, description, number, url, date }) => (
             <Card
+              date={date}
               key={title}
               title={title}
               number={number}
               url={url}
               description={description}
-            >
-              <span>children</span>
-            </Card>
+            />
           ))}
         </div>
         <div className="slider-btn">

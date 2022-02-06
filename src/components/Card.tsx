@@ -1,20 +1,21 @@
 import { NavLink } from "react-router-dom";
+
 import "./Card.css";
 
 interface Props {
   title: string | JSX.Element;
   description: string;
-  children: React.ReactElement | React.ReactElement[];
   number: string;
   url: string;
+  date: string;
 }
 
 const Card = ({
   title,
   description,
-  children,
   number,
   url,
+  date,
 }: Props): JSX.Element => (
   <NavLink
     to={`${url}`}
@@ -37,7 +38,7 @@ const Card = ({
           <div className="sphere-six inner"></div>
         </div>
         <h3 className="card-title">{title}</h3>
-        <p className="card-date">10 SEP 2021</p>
+        <p className="card-date">{date}</p>
       </div>
       <div className="card-desc">{description}</div>
     </div>
