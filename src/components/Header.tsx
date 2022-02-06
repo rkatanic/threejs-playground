@@ -20,12 +20,15 @@ const Header = (): JSX.Element => {
         <div className="header-content-left">
           <span className="header-txt">radivoje.katanic</span>
           <InfoIcon />
-          <div className="header-info">
-            Radivoje Katanić is a software developer located in Doboj, <br />
-            Bosnia & Herzegovina. <br /> Coder, outdoors enthusiast, & animal
-            lover.
-            <br />
-            Fun fact: I have 10 cats around my house.
+          <div className="header-info-content">
+            <div className="triangle"></div>
+            <div className="header-info">
+              Radivoje Katanić is a software developer located in Doboj, <br />
+              Bosnia & Herzegovina. <br /> Coder, outdoors enthusiast, <br />{" "}
+              and animal lover.
+              <br />
+              Fun fact: I have 10 cats around my house.
+            </div>
           </div>
         </div>
         <span className="header-txt date-time">

@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 1000px) {
   :root {
-    --width-desktop: 40rem;
+    --width-desktop: 40rem !important;
   }
 
   .home-scroll {

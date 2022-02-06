@@ -82,6 +82,10 @@
   opacity: 1;
 }
 
+.nav-link-active .cube {
+  animation: rotate 15s linear infinite;
+}
+
 .card-heading::before {
   opacity: 0;
   border-left: 6px solid transparent;
@@ -120,18 +124,17 @@
 }
 
 .cube {
-  margin: 0 auto 3rem;
+  margin: 0 auto 1.5rem;
   top: 50%;
   transform-style: preserve-3d;
   transform: rotateX(-1deg) rotateY(-1deg) rotateZ(-1deg);
-  animation: rotate 15s linear infinite;
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 8rem;
+  width: 8rem;
 }
 
 .cube div {
-  height: 6.5rem;
-  width: 6.5rem;
+  height: 8rem;
+  width: 8rem;
   background: transparent;
   position: absolute;
   transform-style: preserve-3d;
@@ -164,15 +167,15 @@
 }
 
 .sphere-three {
-  transform: rotateY(45deg) rotateX(45deg) translateY(0);
+  transform: rotateY(25deg) rotateX(45deg) translateY(0);
 }
 
 .sphere-five {
-  transform: rotateY(-45deg) rotateX(-45deg) translateY(0);
+  transform: rotateY(-65deg) rotateX(-45deg) translateY(0);
 }
 
 .sphere-six {
-  transform: rotateY(-45deg) rotateX(45deg) translateY(0);
+  transform: rotateY(-55deg) rotateX(45deg) translateY(0);
 }
 
 @keyframes rotate {

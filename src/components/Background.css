@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100vw;
   background-image: radial-gradient(
     var(--color-gray-three) 1px,
     transparent 1px

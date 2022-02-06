@@ -60,23 +60,26 @@ const ColorSwitch = (): JSX.Element => {
           icon={<DropIcon />}
         />
         {showColorList && (
-          <div className="color-list">
-            {COLORS.map(
-              ({ key, value }): JSX.Element => (
-                <div
-                  data-testid={`color-item-${value}`}
-                  onClick={() => handleColorSwitch(value)}
-                  key={key}
-                  className="color-item"
-                  style={{
-                    background: `hsl(${value},72%,67%)`,
-                  }}
-                >
-                  {selectedColor === value && <CheckIcon />}
-                </div>
-              )
-            )}
-          </div>
+          <>
+            <div className="triangle"></div>
+            <div className="color-list">
+              {COLORS.map(
+                ({ key, value }): JSX.Element => (
+                  <div
+                    data-testid={`color-item-${value}`}
+                    onClick={() => handleColorSwitch(value)}
+                    key={key}
+                    className="color-item"
+                    style={{
+                      background: `hsl(${value},72%,67%)`,
+                    }}
+                  >
+                    {selectedColor === value && <CheckIcon />}
+                  </div>
+                )
+              )}
+            </div>
+          </>
         )}
       </div>
     </>
