@@ -2,6 +2,7 @@ import BasicGeometry from "../../components/examples/BasicGeometry";
 import DistortedSphere from "../../components/examples/DistortedSphere";
 import WaveShader from "../../components/examples/wave-shader/WaveShader";
 import ThreeSixtyView from "../../components/examples/ThreeSixtyView";
+import Model from "../../components/examples/Model";
 
 export const EXAMPLES = [
   {
@@ -25,12 +26,18 @@ export const EXAMPLES = [
     description: "Example of wave shader attached on plane geometry.",
     component: <WaveShader />,
   },
-
   {
     title: "360° View",
     number: "04",
     url: "360-view",
     description: "360° view made using sphere geometry with image texture.",
     component: <ThreeSixtyView />,
+  },
+  {
+    title: "3D Model",
+    number: "05",
+    url: "3d-model",
+    description: "Example of 3D imported model with basic color settings.",
+    component: <Model />,
   },
 ];
