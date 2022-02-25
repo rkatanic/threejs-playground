@@ -1,14 +1,17 @@
 import { useEffect } from "react";
-import { useIsDarkMode, useToggleDarkMode } from "../context/GlobalContext";
+import {
+  useIsDarkMode,
+  useToggleDarkMode,
+  useSetDarkMode,
+} from "../context/GlobalContext";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 
 import "./DarkModeSwitch.css";
-import IconButton from "./IconButton";
 
 const DarkModeSwitch = (): JSX.Element => {
   const isDarkMode = useIsDarkMode();
-  const toggleDarkMode = useToggleDarkMode();
+  const toggleDarkMode = useSetDarkMode();
 
   useEffect(() => {
     const shouldShowDarkMode = (): void => {
@@ -25,11 +28,25 @@ const DarkModeSwitch = (): JSX.Element => {
 
   return (
     <div className="dark-mode-switch">
-      <IconButton
-        type="outline"
-        onClick={toggleDarkMode}
-        icon={isDarkMode ? <SunIcon /> : <MoonIcon />}
-      />
+      <div className="theme-switch">
+        <div
+          className={`theme-switch-button ${isDarkMode ? "active" : ""}`}
+        ></div>
+        <div
+          className={`theme-switch-item ${!isDarkMode ? "active" : ""}`}
+          onClick={() => toggleDarkMode(false)}
+        >
+          <SunIcon />
+          <span>Light</span>
+        </div>
+        <div
+          className={`theme-switch-item ${isDarkMode ? "active" : ""}`}
+          onClick={() => toggleDarkMode(true)}
+        >
+          <MoonIcon />
+          <span>Dark</span>
+        </div>
+      </div>
     </div>
   );
 };

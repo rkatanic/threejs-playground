@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import { ReactComponent as InfoIcon } from "../assets/icons/info.svg";
+import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
 
 import "./Header.css";
 
@@ -17,25 +17,11 @@ const Header = (): JSX.Element => {
   return (
     <div className="header">
       <div className="header-content">
-        <div className="header-content-left">
-          <span className="header-txt">radivoje.katanic</span>
-          <InfoIcon />
-          <div className="header-info-content">
-            <div className="triangle"></div>
-            <div className="header-info">
-              Radivoje Katanić is a software developer located in Doboj, <br />
-              Bosnia & Herzegovina. <br /> Coder, outdoors enthusiast, <br />{" "}
-              and animal lover.
-              <br />
-              Fun fact: I have 10 cats around my house.
-            </div>
-          </div>
-        </div>
         <span className="header-txt date-time">
           {format(time, "iii dd MMM yyyy hh:mm:ss a")}
         </span>
       </div>
-      <div className="header-line"></div>
+      <h3>Radivoje Katanić</h3>
     </div>
   );
 };

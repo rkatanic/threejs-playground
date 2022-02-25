@@ -1,18 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,500;0,600;1,300&display=swap");
 
 :root {
   --color-hue: 160;
   --color-black: hsl(0, 0%, 7%);
+  --color-black-two: hsl(0, 0%, 5%);
   --color-white: hsl(0, 0%, 100%);
   --color-gray: hsl(0, 0%, 30%);
   --color-gray-two: hsl(0, 0%, 11.5%);
   --color-gray-three: hsl(0, 0%, 10%);
-  --color-gray-four: hsl(0, 0%, 70%);
+  --color-gray-four: hsl(0, 0%, 50%);
   --color-gray-five: hsl(0, 0%, 15%);
 
   --color-primary: hsl(var(--color-hue), 70%, 62%);
 
-  --font-body: "Exo", sans-serif;
+  --font-body: "Nunito", sans-serif;
 
   --margin-left: 12.5vw;
   --nav-height: 4rem;
@@ -22,7 +23,6 @@
 
 * {
   box-sizing: border-box;
-  cursor: none;
 }
 
 ::-webkit-scrollbar {
@@ -68,4 +68,21 @@ a {
 
 html {
   scroll-behavior: smooth !important;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: var(--color-gray-five);
+  position: relative;
+}
+
+hr::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  background-color: var(--color-black);
 }

@@ -3,62 +3,21 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  margin: 4rem 0;
-  padding: 1rem;
-  background-color: var(--color-gray-five);
+  border-radius: 8px;
   position: relative;
-  height: 550px;
-  clip-path: polygon(
-    3% 0%,
-    57% 0%,
-    60% 5%,
-    100% 5%,
-    100% 95%,
-    97% 100%,
-    25% 100%,
-    22% 95%,
-    0% 95%,
-    0% 5%
-  );
-}
-
-.example-container::before {
-  content: "";
-  position: absolute;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  background-color: var(--color-black);
-  clip-path: polygon(
-    3% 0%,
-    57% 0%,
-    60% 5%,
-    100% 5%,
-    100% 95%,
-    97% 100%,
-    25% 100%,
-    22% 95%,
-    0% 95%,
-    0% 5%
-  );
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  background-image: radial-gradient(var(--color-gray-three) 1px, transparent 0);
+  background-size: 1rem 1rem;
 }
 
 .three-js-canvas {
-  clip-path: polygon(
-    3% 0%,
-    57% 0%,
-    60% 5%,
-    100% 5%,
-    100% 95%,
-    97% 100%,
-    25% 100%,
-    22% 95%,
-    0% 95%,
-    0% 5%
-  );
-  height: 520px !important;
+  height: 100vh !important;
 }
 
 .example {
+  width: 100%;
   position: relative;
 }
 

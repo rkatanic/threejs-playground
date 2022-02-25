@@ -3,56 +3,29 @@
 }
 
 .color-list {
-  top: 3.75rem;
+  top: 3.5rem;
   right: -4.5rem;
-  padding: 1.5rem 1rem;
-  background-color: var(--color-gray-five);
+  padding: 1rem;
+  border: 1px solid var(--color-gray-five);
+  background-color: var(--color-black);
   width: 12rem;
   position: absolute;
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
   z-index: 1;
-  clip-path: polygon(
-    0% 15%,
-    15% 0%,
-    100% 0%,
-    100% 95%,
-    30% 95%,
-    25% 100%,
-    0% 100%
-  );
+  border-radius: 8px;
 }
 
 .color-list::before {
-  top: 2px;
-  left: 2px;
   content: "";
   position: absolute;
-  width: calc(100% - 4px);
-  height: calc(100% - 4px);
-  background: var(--color-black);
-  clip-path: polygon(
-    0% 15%,
-    15% 0%,
-    100% 0%,
-    100% 95%,
-    30% 95%,
-    25% 100%,
-    0% 100%
-  );
-}
-
-.triangle {
-  z-index: 100;
-  content: "";
-  position: absolute;
-  top: 3.125rem;
-  left: 0.75rem;
-  background: var(--color-gray-five);
-  width: 1rem;
-  height: 0.75rem;
+  width: 0.75rem;
+  height: 0.5rem;
+  left: calc(50% - 0.15rem);
+  top: -0.5rem;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background-color: var(--color-gray-five);
 }
 
 .color-item {

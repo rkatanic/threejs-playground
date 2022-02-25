@@ -3,6 +3,7 @@ import { createContext, useContext, useState } from "react";
 interface GlobalContextType {
   isDarkMode: boolean;
   toggleDarkMode: () => void;
+  setDarkMode: (value: boolean) => void;
 }
 
 export const GlobalContext = createContext<GlobalContextType>({
@@ -18,11 +19,16 @@ const GlobalContextProvider = ({ children }: any): JSX.Element => {
     setIsDarkMode((prevState: boolean) => !prevState);
   };
 
+  const setDarkMode = (value: boolean): void => {
+    setIsDarkMode(value);
+  };
+
   return (
     <GlobalContext.Provider
       value={{
         isDarkMode,
         toggleDarkMode,
+        setDarkMode,
       }}
     >
       {children}
@@ -40,4 +46,14 @@ const useToggleDarkMode = (): (() => void) => {
   return toggleDarkMode;
 };
 
-export { GlobalContextProvider, useIsDarkMode, useToggleDarkMode };
+const useSetDarkMode = () => {
+  const { setDarkMode } = useContext(GlobalContext);
+  return setDarkMode;
+};
+
+export {
+  GlobalContextProvider,
+  useIsDarkMode,
+  useToggleDarkMode,
+  useSetDarkMode,
+};

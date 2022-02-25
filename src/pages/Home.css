@@ -1,186 +1,81 @@
-.home-heading {
-  position: relative;
-  margin: 6rem 0;
+#home {
+  flex: 1;
+  background-image: radial-gradient(var(--color-gray-three) 1px, transparent 0);
+  background-size: 1rem 1rem;
 }
 
-.home-title-container {
+.home-content {
+  padding: 2rem;
+}
+
+.txt-heading {
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
+  font-size: 1.5rem;
 }
 
-.home-title {
-  letter-spacing: 4px;
-  font-size: 4rem;
-  text-align: center;
-  position: relative;
+.txt-heading svg > path {
+  stroke: var(--color-gray);
 }
 
-.home-title span:last-child {
-  font-size: 10.5rem;
-}
-
-.home-title-binary {
-  position: absolute;
-  text-align: justify;
-  top: 20%;
-  right: 0%;
-  max-width: 6rem;
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: 0.825rem;
-  z-index: -1;
-  color: var(--color-gray);
-}
-
-.shapes {
-  padding: 0 2rem;
+.examples-content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
   gap: 1rem;
+}
+
+.about {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 16rem;
+}
+
+.example-list-container {
+  flex: 2;
+}
+
+.about-card {
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: var(--color-gray-three);
+  border: 1px solid var(--color-gray-two);
+}
+
+.about-last-modified {
+  display: flex;
   align-items: center;
-  display: flex;
-}
-
-.vertical-line {
-  height: 10rem;
-  width: 1px;
-  background: var(--color-gray);
-  position: relative;
-}
-
-.vertical-line::before {
-  position: absolute;
-  content: "";
-  top: 1.5rem;
-  left: -1px;
-  width: 3px;
-  height: 2rem;
-  background: var(--color-white);
-}
-
-.vertical-line::after {
-  position: absolute;
-  content: "";
-  bottom: 1.5rem;
-  left: -1px;
-  width: 3px;
-  height: 2rem;
-  background: var(--color-white);
-}
-
-.shape-rectangle {
-  width: 2rem;
-  height: 6rem;
-  border: 1px solid var(--color-gray);
-  position: relative;
-}
-
-.shape-rectangle:first-child {
-  border-right: 0;
-}
-
-.shape-rectangle:last-child {
-  border-left: 0;
-}
-
-.shape-rectangle::before {
-  position: absolute;
-  content: "";
-  top: 50%;
-  width: 0;
-  height: 0;
-  border-left: 0;
-}
-
-.shape-rectangle:first-child:before {
-  left: -1.5rem;
-  border: 0.35rem solid transparent;
-  border-right: 0.5rem solid var(--color-gray);
-}
-
-.shape-rectangle:last-child:before {
-  right: -1.5rem;
-  border: 0.35rem solid transparent;
-  border-left: 0.5rem solid var(--color-gray);
-}
-
-.shape-rectangle::after {
-  transform: rotate(45deg);
-  position: absolute;
-  content: "";
-  top: calc(50% - 0.5rem);
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 2px solid var(--color-white);
-}
-
-.shape-rectangle:first-child::after {
-  left: -4rem;
-}
-
-.shape-rectangle:last-child::after {
-  right: -4rem;
-}
-
-.home-subtitle {
-  line-height: 1.25;
-  text-align: center;
-  font-weight: 400;
-  font-size: 1.625rem;
-}
-
-.home-scroll {
-  display: flex;
   gap: 0.5rem;
-  position: absolute;
-  left: 3rem;
-  top: 50%;
-  letter-spacing: 2px;
-  font-size: 0.75rem;
-  font-weight: 500;
-  transform: rotate(-90deg);
+  color: var(--color-primary);
 }
 
-.home-scroll-icons .icon-chevron-right {
-  margin-top: -0.25rem;
-  margin-left: -0.45rem;
-  transform: rotate(180deg);
-  width: 12px;
+.about-last-modified svg {
+  width: 1rem;
+  height: 1rem;
 }
 
-.home-settings {
-  top: 4.5rem;
-  right: 5rem;
-  position: absolute;
+.about-contact-links {
+  display: flex;
+  gap: 1rem;
 }
 
-.vr-line {
-  top: 5%;
-  right: 6.25rem;
-  position: absolute;
-  width: 2px;
-  height: 85%;
-  background: var(--color-gray-five);
+.about-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: var(--color-primary);
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-.vr-line::before,
-.vr-line::after {
-  position: absolute;
-  content: "";
-  width: 12px;
-  left: -5px;
-  height: 2px;
-  background: var(--color-gray-five);
+.about-contact-link svg {
+  width: 1rem;
+  height: 1rem;
 }
 
-.vr-line::after {
-  bottom: 0;
-}
-
-.vr-bubble {
-  margin: 3rem 0 3rem -3px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: var(--color-gray-five);
+.about-contact-link svg > path {
+  stroke: var(--color-primary);
 }

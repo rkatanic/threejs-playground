@@ -1,12 +1,18 @@
 .App {
-  height: 100vh;
   width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .main {
-  position: relative;
-  margin: auto;
-  max-width: var(--width-desktop);
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  overflow-y: auto;
 }
 
 .message-box {

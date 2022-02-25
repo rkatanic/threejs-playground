@@ -1,82 +1,61 @@
 import ExamplesSlider from "../components/ExamplesSlider";
-import { ReactComponent as ChevronRightIcon } from "../assets/icons/chevron-right.svg";
-import Settings from "../components/Settings";
+import Header from "../components/Header";
+import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
+import { ReactComponent as LinkedinIcon } from "../assets/icons/github.svg";
+import { ReactComponent as GithubIcon } from "../assets/icons/linkedin.svg";
 
 import "./Home.css";
 
 const Home = (): JSX.Element => {
   return (
     <div id="home">
-      <div className="vr-line">
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-        <div className="vr-bubble"></div>
-      </div>
-      <div className="home-heading">
-        <div className="home-title-container">
-          <div className="home-scroll">
-            <div className="home-scroll-icons">
-              <ChevronRightIcon />
-              <ChevronRightIcon />
-              <ChevronRightIcon />
+      <Header />
+      <div className="home-content">
+        <div className="examples-content">
+          <ExamplesSlider />
+          <div className="about">
+            <div className="about-card">
+              <h3 className="txt-heading">About Project</h3>
+              <hr />
+              <p>
+                This place is a small archive <br /> of my personal three.js
+                learning journey.
+              </p>
+              <p>
+                Main idea was to document learning progress, to create some kind
+                of archive as reminder for later.
+              </p>
+              <p>
+                This project is built using React, <br /> with react-three-fiber
+                renderer for Three.js.
+              </p>
+              <hr />
+              <div className="about-last-modified">
+                <CheckIcon />
+                <span>Last updated: 20.Feb.2022.</span>
+              </div>
             </div>
-            <span> SCROLL</span>
-          </div>
-          <div className="shapes">
-            <div className="shape-rectangle"></div>
-            <div className="vertical-line"></div>
-          </div>
-          <h3 className="home-title">
-            <span className="home-title-binary">
-              1000111 001 10 1000 10101 010 10 1110 0 101 11 0111 00100 0 110 00
-              10 010 0111 101000 101 0111 0 111000 1110 1 01 0100 1 00 11 11001
-              10010 1000 101 110
-            </span>
-            <span>THREE.JS</span> <br />
-            <span>LAB</span>
-          </h3>
-          <div className="shapes">
-            <div className="vertical-line"></div>
-            <div className="shape-rectangle"></div>
-          </div>
-        </div>
 
-        <h3 className="home-subtitle">
-          This place is a small archive <br />
-          of my personal Three.js learning journey.
-        </h3>
-
-        <div className="home-settings">
-          <Settings />
+            <div className="about-card">
+              <h3 className="txt-heading">About Author</h3>
+              <hr />
+              <p>
+                Radivoje Katanic is full stack developer located in Doboj,
+                Bosnia & Herzegovina.
+              </p>
+              <hr />
+              <div className="about-contact-links">
+                <a className="about-contact-link">
+                  <LinkedinIcon /> LinkedIn
+                </a>
+                <a className="about-contact-link">
+                  <GithubIcon /> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
-      <ExamplesSlider />
     </div>
   );
 };
