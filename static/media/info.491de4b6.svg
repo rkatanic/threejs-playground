@@ -1,5 +1,0 @@
-<svg class="icon icon-info" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12.873 22.9549C18.3959 22.9549 22.873 18.4777 22.873 12.9549C22.873 7.43203 18.3959 2.95488 12.873 2.95488C7.3502 2.95488 2.87305 7.43203 2.87305 12.9549C2.87305 18.4777 7.3502 22.9549 12.873 22.9549Z" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M12.873 16.9549V12.9549" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-    <path d="M12.873 8.95488H12.883" stroke="var(--color-white)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-</svg>
