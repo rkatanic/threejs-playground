@@ -11,14 +11,9 @@
   --color-gray-four: hsl(0, 0%, 50%);
   --color-gray-five: hsl(0, 0%, 15%);
 
-  --color-primary: hsl(var(--color-hue), 70%, 62%);
+  --color-primary: hsl(var(--color-hue), 50%, 62%);
 
   --font-body: "Nunito", sans-serif;
-
-  --margin-left: 12.5vw;
-  --nav-height: 4rem;
-  --width-desktop: 60rem;
-  --width-sidenav: 4rem;
 }
 
 * {
@@ -26,7 +21,11 @@
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-five);
 }
 
 body {
@@ -39,13 +38,15 @@ body {
 }
 
 body.day-mode {
-  --color-black: hsl(0, 0%, 95%);
-  --color-white: hsl(0, 0%, 15%);
-  --color-gray: hsl(0, 0%, 9%);
-  --color-gray-two: hsl(0, 0%, 95%);
-  --color-gray-three: hsl(0, 0%, 88%);
+  --color-black: hsl(0, 0%, 94%);
+  --color-white: hsl(0, 0%, 14%);
+  --color-gray: hsl(0, 0%, 74%);
+  --color-gray-two: hsl(0, 0%, 90%);
+  --color-gray-three: hsl(0, 0%, 91%);
   --color-gray-four: hsl(0, 0%, 55%);
-  --color-gray-five: hsl(0, 0%, 84%);
+  --color-gray-five: hsl(0, 0%, 85%);
+  --color-primary: hsl(var(--color-hue), 60%, 50%);
+  --color-black-two: hsl(0, 0%, 50%);
 }
 
 h1,

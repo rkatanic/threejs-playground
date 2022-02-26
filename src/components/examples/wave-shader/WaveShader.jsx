@@ -16,14 +16,14 @@ const WaveShader = () => {
     });
     return (
       <mesh>
-        <planeGeometry args={[1, 1.25, 32, 32]} />
+        <planeGeometry args={[1, 1.25, 200, 200]} />
         <customMaterial ref={material} attach="material" map={texture} />
       </mesh>
     );
   };
 
   return (
-    <Canvas camera={{ position: [0, 0, 1] }}>
+    <Canvas className="three-js-canvas" camera={{ position: [0, 0, 1] }}>
       <Suspense fallback={null}>
         <Geometry />
       </Suspense>

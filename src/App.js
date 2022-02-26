@@ -1,13 +1,8 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { BrowserView } from "react-device-detect";
 import { GlobalContextProvider } from "./context/GlobalContext";
 import Home from "./pages/Home";
-import Background from "./components/Background";
-import Header from "./components/Header";
 import Examples from "./components/examples/Examples";
-import Footer from "./components/Footer";
-import ScrollProgress from "./components/ScrollProgress";
 import Sidenav from "./components/Sidenav";
 
 import "./App.css";

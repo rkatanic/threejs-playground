@@ -13,18 +13,20 @@ import {
 
 import "./BasicGeometry.css";
 
+const shapes = [
+  { key: "box", value: "Box" },
+  { key: "sphere", value: "Sphere" },
+  { key: "cone", value: "Cone" },
+  { key: "tetrahedron", value: "Tetrahedron" },
+  { key: "dodecahedron", value: "Dodecahedron" },
+  { key: "torus", value: "Torus" },
+  { key: "torus-knot", value: "Torus Knot" },
+];
+
+const color = "hsl(160,90%,45%)";
+
 const BasicGeometry = (): JSX.Element => {
   const [shape, setShape] = useState("box");
-
-  const shapes = [
-    { key: "box", value: "Box" },
-    { key: "sphere", value: "Sphere" },
-    { key: "cone", value: "Cone" },
-    { key: "tetrahedron", value: "Tetrahedron" },
-    { key: "dodecahedron", value: "Dodecahedron" },
-    { key: "torus", value: "Torus" },
-    { key: "torus-knot", value: "Torus Knot" },
-  ];
 
   const Geometry = (): JSX.Element => {
     const [clicked, setClicked] = useState(false);
@@ -45,7 +47,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[1, 1, 1]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Box>
         )}
         {shape === "sphere" && (
@@ -55,7 +57,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.75, 30, 30]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Sphere>
         )}
         {shape === "cone" && (
@@ -65,7 +67,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.75, 0.75, 12]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Cone>
         )}
 
@@ -76,7 +78,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.75]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Tetrahedron>
         )}
         {shape === "dodecahedron" && (
@@ -86,7 +88,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.75]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Dodecahedron>
         )}
 
@@ -97,7 +99,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.5, 0.15, 10, 50]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </Torus>
         )}
         {shape === "torus-knot" && (
@@ -107,7 +109,7 @@ const BasicGeometry = (): JSX.Element => {
             args={[0.5, 0.125]}
             onClick={() => setClicked((prevState) => !prevState)}
           >
-            <meshStandardMaterial wireframe={clicked} color={"hsl(0,0%,45%)"} />
+            <meshStandardMaterial wireframe={clicked} color={color} />
           </TorusKnot>
         )}
       </>

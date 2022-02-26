@@ -1,16 +1,21 @@
 import { useRef, Suspense } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { MeshDistortMaterial, Sphere } from "@react-three/drei";
 
 const DistortedSphere = (): JSX.Element => {
   const Geometry = () => {
     const ref = useRef<any>();
+    const { mouse } = useThree();
 
+    useFrame(() => {
+      ref.current.rotation.y = mouse.x;
+      ref.current.rotation.x = mouse.y;
+    });
     return (
       <Sphere ref={ref} visible args={[2.2, 100, 100]}>
         <MeshDistortMaterial
           wireframe
-          color={"hsl(0,0%,25%)"}
+          color={"hsl(160,90%,45%)"}
           attach="material"
           distort={0.4}
           speed={3}

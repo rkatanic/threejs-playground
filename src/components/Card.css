@@ -3,6 +3,7 @@
   border-radius: 8px;
   background-color: var(--color-gray-three);
   border: 1px solid var(--color-gray-two);
+  min-width: 16rem;
 }
 
 .card-title {

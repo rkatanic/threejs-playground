@@ -45,10 +45,20 @@ const Home = (): JSX.Element => {
               </p>
               <hr />
               <div className="about-contact-links">
-                <a className="about-contact-link">
+                <a
+                  href="https://www.linkedin.com/in/radivoje-katanic"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="about-contact-link"
+                >
                   <LinkedinIcon /> LinkedIn
                 </a>
-                <a className="about-contact-link">
+                <a
+                  href="https://github.com/k-rade"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="about-contact-link"
+                >
                   <GithubIcon /> GitHub
                 </a>
               </div>

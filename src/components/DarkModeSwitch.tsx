@@ -1,9 +1,5 @@
 import { useEffect } from "react";
-import {
-  useIsDarkMode,
-  useToggleDarkMode,
-  useSetDarkMode,
-} from "../context/GlobalContext";
+import { useIsDarkMode, useSetDarkMode } from "../context/GlobalContext";
 import { ReactComponent as SunIcon } from "../assets/icons/sun.svg";
 import { ReactComponent as MoonIcon } from "../assets/icons/moon.svg";
 

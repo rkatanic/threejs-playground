@@ -46,7 +46,7 @@ const Model = () => {
         emissive: new THREE.Color("#000000"),
         envMapIntensity: 0.5,
       });
-    }, [scene, materials, currentColor]);
+    }, [scene, materials]);
 
     return <primitive object={scene} scale={0.01} />;
   };

@@ -97,7 +97,7 @@ li {
   content: "";
   left: 1.25rem;
   width: 1px;
-  height: 89%;
+  height: 91%;
   background-color: var(--color-gray);
 }
 
@@ -111,7 +111,7 @@ li {
   position: absolute;
   content: "";
   top: 0.25rem;
-  left: -1.25rem;
+  left: -1.275rem;
   width: 1rem;
   height: 1rem;
   transform: rotate(-50deg);

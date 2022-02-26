@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { format } from "date-fns";
-import { ReactComponent as CheckIcon } from "../assets/icons/check.svg";
 
 import "./Header.css";
 
